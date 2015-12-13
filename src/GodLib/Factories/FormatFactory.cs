@@ -1,8 +1,8 @@
 ﻿using System;
-using Problem._0.Adapters;
-using Problem._0.Entities;
+using GodLib.Adapters;
+using GodLib.Entities;
 
-namespace Problem._0.Factories
+namespace GodLib.Factories
 {
 	public class FormatFactory
 	{

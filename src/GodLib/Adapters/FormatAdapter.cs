@@ -1,6 +1,6 @@
-using Problem._0.Serializers;
+using GodLib.Serializers;
 
-namespace Problem._0.Adapters
+namespace GodLib.Adapters
 {
 	public abstract class FormatAdapter<TInput, TOutput> : IFormatAdapter
 	{

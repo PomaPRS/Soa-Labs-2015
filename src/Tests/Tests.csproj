@@ -55,21 +55,21 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Problem.0\FormatFactoryTests.cs" />
-    <Compile Include="Problem.0\IOAdapterTests.cs" />
-    <Compile Include="Problem.0\JsonBaseSerializerTests.cs" />
-    <Compile Include="Problem.0\JsonIOAdapterTests.cs" />
+    <Compile Include="GodLibTests\FormatFactoryTests.cs" />
+    <Compile Include="GodLibTests\IOAdapterTests.cs" />
+    <Compile Include="GodLibTests\JsonBaseSerializerTests.cs" />
+    <Compile Include="GodLibTests\JsonIOAdapterTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Problem.0\XmlBaseSerializerTests.cs" />
-    <Compile Include="Problem.0\XmlIOAdapterTests.cs" />
+    <Compile Include="GodLibTests\XmlBaseSerializerTests.cs" />
+    <Compile Include="GodLibTests\XmlIOAdapterTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Problem.0\Problem.0.csproj">
-      <Project>{bb3704dc-e687-434c-8ccf-773ab6733f07}</Project>
-      <Name>Problem.0</Name>
+    <ProjectReference Include="..\GodLib\GodLib.csproj">
+      <Project>{1ec43dfc-f1e7-4d46-9019-11fd912a1ecc}</Project>
+      <Name>GodLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

@@ -1,6 +1,6 @@
-﻿using NUnit.Framework;
-using Problem._0.Adapters;
-using Problem._0.Factories;
+﻿using GodLib.Adapters;
+using GodLib.Factories;
+using NUnit.Framework;
 
 namespace Tests.Problem._0
 {

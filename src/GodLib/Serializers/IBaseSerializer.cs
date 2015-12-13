@@ -1,4 +1,4 @@
-﻿namespace Problem._0.Serializers
+﻿namespace GodLib.Serializers
 {
 	public interface IBaseSerializer<T>
 	{

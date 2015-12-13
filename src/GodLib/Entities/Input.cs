@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace Problem._0.Entities
+namespace GodLib.Entities
 {
 	public class Input
 	{

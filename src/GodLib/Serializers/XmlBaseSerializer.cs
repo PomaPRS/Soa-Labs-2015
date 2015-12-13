@@ -2,7 +2,7 @@
 using System.Xml;
 using System.Xml.Serialization;
 
-namespace Problem._0.Serializers
+namespace GodLib.Serializers
 {
 	public class XmlBaseSerializer<T> : IBaseSerializer<T>
 	{

@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace Problem._0.Serializers
+namespace GodLib.Serializers
 {
 	public class JsonBaseSerializer<T> : IBaseSerializer<T>
 	{

@@ -1,7 +1,7 @@
 using System.Linq;
-using Problem._0.Entities;
+using GodLib.Entities;
 
-namespace Problem._0.Adapters
+namespace GodLib.Adapters
 {
 	public class IOAdapter : IAdapter<Input, Output>
 	{

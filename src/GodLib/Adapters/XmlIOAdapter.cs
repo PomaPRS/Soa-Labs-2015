@@ -1,7 +1,7 @@
-﻿using Problem._0.Entities;
-using Problem._0.Serializers;
+﻿using GodLib.Entities;
+using GodLib.Serializers;
 
-namespace Problem._0.Adapters
+namespace GodLib.Adapters
 {
 	public class XmlIOAdapter : FormatAdapter<Input, Output>
 	{

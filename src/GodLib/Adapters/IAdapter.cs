@@ -1,4 +1,4 @@
-﻿namespace Problem._0.Adapters
+﻿namespace GodLib.Adapters
 {
 	public interface IAdapter<TInput, TOutput>
 	{

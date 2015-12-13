@@ -1,5 +1,5 @@
-﻿using NUnit.Framework;
-using Problem._0.Adapters;
+﻿using GodLib.Adapters;
+using NUnit.Framework;
 
 namespace Tests.Problem._0
 {
