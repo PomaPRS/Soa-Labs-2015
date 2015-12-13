@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GodLib", "GodLib\GodLib.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem.A", "Problem.A\Problem.A.csproj", "{458ED8A1-8E8A-4030-96F6-909DE01B00D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem.B", "Problem.B\Problem.B.csproj", "{33DAAD57-766F-40DD-80E6-CA179849F443}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{458ED8A1-8E8A-4030-96F6-909DE01B00D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{458ED8A1-8E8A-4030-96F6-909DE01B00D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{458ED8A1-8E8A-4030-96F6-909DE01B00D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33DAAD57-766F-40DD-80E6-CA179849F443}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33DAAD57-766F-40DD-80E6-CA179849F443}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33DAAD57-766F-40DD-80E6-CA179849F443}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33DAAD57-766F-40DD-80E6-CA179849F443}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

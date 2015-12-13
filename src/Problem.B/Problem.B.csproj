@@ -4,16 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1EC43DFC-F1E7-4D46-9019-11FD912A1ECC}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{33DAAD57-766F-40DD-80E6-CA179849F443}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GodLib</RootNamespace>
-    <AssemblyName>GodLib</AssemblyName>
+    <RootNamespace>Problem.B</RootNamespace>
+    <AssemblyName>Problem.B</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -31,10 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,30 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Adapters\FormatAdapter.cs" />
-    <Compile Include="Adapters\IAdapter.cs" />
-    <Compile Include="Adapters\IFormatAdapter.cs" />
-    <Compile Include="Adapters\IOAdapter.cs" />
-    <Compile Include="Adapters\JsonIOAdapter.cs" />
-    <Compile Include="Adapters\XmlIOAdapter.cs" />
-    <Compile Include="Entities\HttpMessengerSettings.cs" />
-    <Compile Include="Entities\Input.cs" />
-    <Compile Include="Entities\Output.cs" />
-    <Compile Include="Entities\Response.cs" />
-    <Compile Include="Factories\FormatFactory.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Serializers\IBaseSerializer.cs" />
-    <Compile Include="Serializers\JsonBaseSerializer.cs" />
-    <Compile Include="Serializers\XmlBaseSerializer.cs" />
-    <Compile Include="Web\ClientProcessor.cs" />
-    <Compile Include="Web\HttpMessenger.cs" />
-    <Compile Include="Web\HttpServer.cs" />
-    <Compile Include="Web\IClientProcessor.cs" />
-    <Compile Include="Web\IHttpMessenger.cs" />
-    <Compile Include="Web\IHttpServer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GodLib\GodLib.csproj">
+      <Project>{1ec43dfc-f1e7-4d46-9019-11fd912a1ecc}</Project>
+      <Name>GodLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
