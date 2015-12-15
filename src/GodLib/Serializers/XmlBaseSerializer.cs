@@ -12,6 +12,7 @@ namespace GodLib.Serializers
 
 		public XmlBaseSerializer()
 		{
+            //todo: не создавать на каждый вызов сериалайзер, хранить где нибудь кеш
 			_xmlSerializer = new XmlSerializer(typeof(T));
 			_xmlWriterSettings = new XmlWriterSettings
 			{

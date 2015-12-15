@@ -12,6 +12,7 @@ namespace GodLib.Web
         public void Process(HttpListenerContext context)
         {
             var actionName = context.Request.Url.AbsolutePath.Trim('/');
+            //todo: сделать рефлексию
             switch (actionName)
             {
                 case "Ping":
