@@ -10,7 +10,7 @@ namespace GodLib.Serializers
 		private readonly XmlWriterSettings _xmlWriterSettings;
 		private readonly XmlSerializerNamespaces _xmlSerializerNamespaces;
 
-		public XmlBaseSerializer()
+        public XmlBaseSerializer()
 		{
             //todo: не создавать на каждый вызов сериалайзер, хранить где нибудь кеш
 			_xmlSerializer = new XmlSerializer(typeof(T));

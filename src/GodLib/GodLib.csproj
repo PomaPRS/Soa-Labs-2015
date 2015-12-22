@@ -60,6 +60,7 @@
     <Compile Include="Serializers\IBaseSerializer.cs" />
     <Compile Include="Serializers\JsonBaseSerializer.cs" />
     <Compile Include="Serializers\XmlBaseSerializer.cs" />
+    <Compile Include="Web\BaseClientProcessor.cs" />
     <Compile Include="Web\ClientProcessor.cs" />
     <Compile Include="Web\HttpMessenger.cs" />
     <Compile Include="Web\HttpServer.cs" />

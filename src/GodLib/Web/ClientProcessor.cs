@@ -5,46 +5,25 @@ using GodLib.Adapters;
 
 namespace GodLib.Web
 {
-    public class ClientProcessor : IClientProcessor
+    public class ClientProcessor : BaseClientProcessor
     {
-        private string lastAnswer = string.Empty;
+        private string _lastAnswer = string.Empty;
 
-        public void Process(HttpListenerContext context)
-        {
-            var actionName = context.Request.Url.AbsolutePath.Trim('/');
-            //todo: сделать рефлексию
-            switch (actionName)
-            {
-                case "Ping":
-                    ProcessPing(context);
-                    break;
-                case "PostInputData":
-                   lastAnswer = ProcessPostInputData(context);
-                    break;
-                case "GetAnswer":
-                    ProcessGetAnswer(context, lastAnswer);
-                    break;
-                default:
-                    context.Response.StatusCode = (int) HttpStatusCode.NotFound;
-                    Send(context);
-                    break;
-            }
-        }
-
-        private void ProcessGetAnswer(HttpListenerContext context, string answer)
+        public void GetAnswer(HttpListenerContext context)
         {
             context.Response.StatusCode = (int) HttpStatusCode.OK;
-            var bytes = Encoding.UTF8.GetBytes(answer);
+            var bytes = Encoding.UTF8.GetBytes(_lastAnswer);
             context.Response.OutputStream.Write(bytes, 0, bytes.Length);
             Send(context);
         }
 
-        private string ProcessPostInputData(HttpListenerContext context)
+        public void PostInputData(HttpListenerContext context)
         {
             if (context.Request.HttpMethod != "POST")
             {
                 context.Response.StatusCode = (int) HttpStatusCode.NotFound;
-                return null;
+                _lastAnswer = null;
+                return;
             }
 
             string data;
@@ -56,18 +35,13 @@ namespace GodLib.Web
             Send(context);
 
             var adapter = new JsonIOAdapter(new IOAdapter());
-            return adapter.Convert(data);
+            _lastAnswer = adapter.Convert(data);
         }
 
-        private void ProcessPing(HttpListenerContext context)
+        public void Ping(HttpListenerContext context)
         {
             context.Response.StatusCode = (int) HttpStatusCode.OK;
             Send(context);
-        }
-
-        private void Send(HttpListenerContext context)
-        {
-            context.Response.OutputStream.Close();
         }
     }
 }
